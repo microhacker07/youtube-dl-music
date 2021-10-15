@@ -1,0 +1,51 @@
+
+# Cookies are useful if you want to download your account's private
+# playlists or if the playlist is your liked videos. Ex: the LM (Liked Music)
+# playlist
+cookie:
+	# location to the file the contains the cookie data
+	location: "./cookie.txt"
+
+music:
+	folder: music
+	# When true it will download music from the playlist
+	download: true
+	# Set max to any positive integer, or -1 for no max downloads
+	max_download: -1
+
+metadata:
+	folder: "metadata"
+
+	# Will search musicbrainz for metadata for new downloads
+	# False will check all files in music folder
+	# if not enable no meta data will be downloaded/used
+	find_new: true
+
+	# Embeds the metadata into the music file
+	embed: true
+
+	# This will keep the metadata in its folder
+	# otherwise it will be removed
+	keep: false
+
+coverart:
+	folder: "coverart"
+
+	# Will search musicbrainz for metadata for only new downloads
+	# False will check all files in music folder
+	# if not enable no meta data will be downloaded/used
+	find_new: true
+
+	# Embeds the metadata into the music file
+	embed: true
+
+	# This will keep the coverart in its folder
+	# otherwise it will be removed
+	# This is useful as it can be used for other music of the
+	# same album/song name
+	keep: true
+
+archive:
+	# Will compress music folder into a "none", "zip", "tar.gz", "tar.bz2"
+	compress: "none"
+	
