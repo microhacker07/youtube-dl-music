@@ -1,3 +1,0 @@
-musicbrainzngs
-youtube_dl
-pyyaml
