@@ -1,5 +1,1 @@
-requests
-pyacoustid
-pylast
 yt-dlp
-beets
