@@ -5,7 +5,11 @@ WORKDIR /usr/src/app
 ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN apt update && apt-get install -y \
-    ffmpeg
+    ffmpeg \
+    python3-gi \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-ugly
 
 COPY ./requirements.txt .
 

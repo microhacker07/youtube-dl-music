@@ -1,11 +1,16 @@
 #!/bin/sh
 
-chmod +x ./src/downloader.sh
-chmod +x ./src/organizer.sh
+chmod +x ./downloader.sh
+chmod +x ./organizer.sh
 
-./src/downloader.sh
+beet config -p
+cp /config/beets_config.yml /root/.config/beets/config.yaml
 
-./src/organizer.sh
+printf "Starting download of all playlists\n"
+./downloader.sh
 
-chown -R 1000 /config /music /download
+printf "Starting beets\n"
+./organizer.sh
+
+chown -R 1000 /config /music /downloads
 
